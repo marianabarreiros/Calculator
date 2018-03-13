@@ -382,13 +382,16 @@ public class Calculator extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         num = Double.parseDouble(jTextField2.getText());
-        calculation = 2;
+        calculation = 1;
         jTextField2.setText("");
-        jLabel2.setText(num + "-");
+        jLabel2.setText(num + "+");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        jTextField2.setText(jTextField2.getText()+ "-");
+        num = Double.parseDouble(jTextField2.getText());
+        calculation = 2;
+        jTextField2.setText("");
+        jLabel2.setText(num + "-");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
