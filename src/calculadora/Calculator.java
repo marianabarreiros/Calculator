@@ -62,6 +62,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("<--");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("c");
@@ -352,6 +357,18 @@ public class Calculator extends javax.swing.JFrame {
     private void formPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_formPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_formPropertyChange
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int lenght = jTextField2.getText().length();
+        int number = jTextField2.getText().length() - 1;
+        String store;
+        if(lenght > 0){
+            StringBuilder back = new StringBuilder(jTextField2.getText());
+            back.deleteCharAt(number);
+            store = back.toString();
+            jTextField2.setText(store);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
