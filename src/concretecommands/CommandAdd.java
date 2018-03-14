@@ -6,27 +6,28 @@
 package concretecommands;
 
 import interfaces.Command;
-import javax.sound.midi.Receiver;
+import view.CalculatorView;
+
 
 /**
  *
  * @author aluno
  */
 public class CommandAdd implements Command{
-    private Receiver receiver;
+    private CalculatorView calc;
     
-    public CommandAdd(Receiver rec){
-        this.receiver = rec;
+    public CommandAdd(CalculatorView calc){
+        this.calc = calc;
     }
     
     @Override
     public void redo() {
-        
+        calc.arithimetic_operation();
     }
 
     @Override
     public void undo() {
-        
+        calc.arithimetic_operation();
     }
     
 }

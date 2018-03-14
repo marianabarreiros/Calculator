@@ -7,19 +7,20 @@ package concretecommands;
 
 import interfaces.Command;
 import javax.sound.midi.Receiver;
+import view.CalculatorView;
 
 /**
  *
  * @author aluno
  */
 public class CommandSub implements Command {
-    private Receiver receiver;
+    private CalculatorView calc;
     
-    public CommandSub(Receiver rec){
-        this.receiver = rec;
+    public CommandSub(CalculatorView calc){
+        this.calc = calc;
     } 
     @Override
-    public void redo() {
+    public void redo(){
         
     }
 
